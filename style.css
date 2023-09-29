@@ -38,6 +38,7 @@ main {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
+    opacity: 0;
     z-index: 100;
 }
 
@@ -51,6 +52,7 @@ main {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
+    opacity: 0;
     z-index: 10;
 }
 
@@ -64,6 +66,7 @@ main {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
+    opacity: 0;
 }
 
 .subHeadline {
@@ -76,6 +79,7 @@ main {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
+    opacity: 0;
 }
 
 .learn-more {
@@ -88,6 +92,7 @@ main {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
+    opacity: 0;
 }
 
 .logo {
@@ -100,6 +105,7 @@ main {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
+    opacity: 0;
 }
 
 .replay {
@@ -112,77 +118,6 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    opacity: 0;
     cursor: pointer;
-}
-
-/* define the keyframes for fade-in and fade-out */
-@keyframes fade-in {
-    0% {
-      opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes fade-out {
-    0% {
-      opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-/* define the keyframes for slide-in left and right */
-@keyframes slide-in-to-left {
-    0% {
-      transform: translateX(-100%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-}
-
-@keyframes slide-in-from-right-to-left {
-    0% {
-      transform: translateX(100%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-}
-
-@keyframes slide-in-from-left-to-right {
-    0% {
-      transform: translateX(-100%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(10%);
-      opacity: 1;
-    }
-}
-
-/* define the keyframes for zoom in and out */
-@keyframes zoom-out {
-    0% {
-      transform: scale(1);
-    }
-    100% {
-      transform: scale(0);
-    }
-}
-
-@keyframes zoom-in {
-    0% {
-      transform: scale(0);
-    }
-    100% {
-      transform: scale(1);
-    }
 }
