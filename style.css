@@ -110,22 +110,9 @@ main {
     right: 23%;
     background-image: url(images/replay.png);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: center center;
-}
-
-.credit {
-    position: relative;
-    width: 600px;
-    height: 600px;
-    margin: 0 auto;
-    overflow: hidden;
-    background-color: transparent;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
+    cursor: pointer;
 }
 
 /* define the keyframes for fade-in and fade-out */

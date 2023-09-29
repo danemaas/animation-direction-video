@@ -1,5 +1,4 @@
 const container = document.querySelector('.container');
-const wrapperDiv = document.querySelector('.wrapper');
 
 function createWomanDiv() {
     let div = document.createElement('div');
@@ -43,30 +42,13 @@ function createLogoDiv() {
     container.appendChild(div);
 }
 
-function createReplayDiv() {
+function createReplayBtn() {
     let div = document.createElement('div');
     div.classList.add('replay');
     div.setAttribute('id', 'replay');
     container.appendChild(div);
 }
 
-function createCreditDiv() {
-    let div = document.createElement('div');
-    div.classList.add('credit');
-    div.setAttribute('id', 'credit');
-
-    let h1 = document.createElement('h1');
-    h1.innerHTML = "Created using HTML, CSS & JavaScript"
-    h1.style.textAlign = "center";
-    div.appendChild(h1);
-
-    let h4 = document.createElement('h4');
-    h4.innerHTML = "Coded by Daniel";
-    h4.style.textAlign = "center";
-    div.appendChild(h4);
-
-    container.appendChild(div);
-}
 
 //function to set the animation style by tageting id element
 function animateElement(elementId, animationName, duration, timingFunction, delay, iterationCount) {
@@ -127,22 +109,27 @@ function display() {
             }, 2500);
 
             setTimeout(() => {
-                createReplayDiv();
+                createReplayBtn();
                 animateElement('replay', 'fade-in', '.5s', 'ease-in-out', '0s', '1');
             }, 3500);
 
         }, 1500);
     }, 5000);
 
-    setTimeout(() => {
-        document.getElementById('headline2').style.zIndex = "-1";
-        document.getElementById('subHeadline').style.zIndex = "-1";
-        document.getElementById('learnMore').style.zIndex = "-1";
-        document.getElementById('logo').style.zIndex = "-1";
-        document.getElementById('replay').style.zIndex = "-1";
-        createCreditDiv();
-        animateElement('credit', 'zoom-in', '.5s', 'ease-in-out', '0s', '1');
-    }, 14000);
+    container.addEventListener('click', (event) => {
+        if (event.target.id === 'replay') {
+          resetAnimation();
+        }
+    });
+}
+
+function resetAnimation() {
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
+
+    // start the animation again
+    display();
 }
 
 display();
