@@ -60,20 +60,24 @@ function animateElement(elementId, animationName, duration, timingFunction, dela
 
 //display and remove all divs by set timeout intervals with animation
 function display() {
+    //first element
     setTimeout(() => {
         createWomanDiv();
         animateElement('woman', 'fade-in', '.5s', 'ease-in-out', '0s', '1');
     }, 2000);
 
+    //second element
     setTimeout(() => {
         createHeadline1Div();
         animateElement('headline1', 'slide-in-to-left', '.5s', 'ease-in-out', '0s', '1');
     }, 3000);
 
+    //first element removed
     setTimeout(() => {
         animateElement('woman', 'fade-out', '1s', 'ease-in-out', '0s', '1');
     }, 4000);
 
+    //final elements
     setTimeout(() => {
         // remove the div.woman from the container
         const womanDiv = document.getElementById('woman');
